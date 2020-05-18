@@ -11,8 +11,8 @@ import redis.clients.jedis.JedisPool;
  * @description
  */
 public class RedisDLockFactory extends AbstractDLockFactory {
-    private JedisPool jedisPool;
-    private LockNameStategy lockNameStategy;
+    private final JedisPool jedisPool;
+    private final LockNameStategy lockNameStategy;
 
     public RedisDLockFactory(JedisPool jedisPool,LockNameStategy lockNameStategy) {
         this.jedisPool = jedisPool;
